@@ -33,3 +33,15 @@ main{
     margin-top: -43px;
     font-weight: bolder;
 }
+a{
+    margin: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(28, 212, 151);
+    font-size: 20px;
+    text-align: center;
+    text-decoration:  none; 
+}
+.j:hover{
+    border: 1px solid  rgb(75, 106, 248);
+    background-color: rgb(28, 125, 211);
+}
