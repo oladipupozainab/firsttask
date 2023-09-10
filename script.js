@@ -4,14 +4,19 @@ const today = new Date();
 const days = today.getDay();
 document.getElementById("days").textContent = day[days];
 //Current UTC Time
-function updateUTCTime() {
-const now = new Date();
-const hours = now.getUTCHours();
-const minutes = now.getUTCMinutes();
-const seconds = now.getUTCSeconds();
-const milliseconds = now.getUTCMilliseconds();
-const formattedTime = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-document.getElementById("time").textContent = formattedTime;
+const millisecondsElement = document.getElementById("milliseconds");
+
+// Function to update the milliseconds
+function updateMilliseconds() {
+  // Get the current date and time
+  const now = new Date();
+  // Get the milliseconds of the current date
+  const milliseconds = now.getMilliseconds();
+  // Update the HTML element with the milliseconds
+  millisecondsElement.textContent = ': ' + milliseconds;
 }
-setInterval(updateUTCTime, 1000);
-updateUTCTime();
+
+// Update the milliseconds every millisecond
+setInterval(updateMilliseconds, 1);
+
+
